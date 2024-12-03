@@ -6,5 +6,5 @@ hide: true
 ---
 
 My journey starts here.
-Sigma
-Super Cool Dude
+
+I am a freshman, and I am interested in sports.
