@@ -5,13 +5,20 @@ description: Home Page
 hide: true
 ---
 
-My journey starts here.
-
 I am a freshman, and I am interested in sports.
 
 Computer science is one of my favorite topics which is why I choose to join this class
 
 
+
+
+My trimester 2 class schedule:
+
+Spanish 1
+Chemistry 1
+CSSE 1
+ENS 1
+Integrated Mathematics 1b
 
 
 
@@ -21,4 +28,4 @@ Computer science is one of my favorite topics which is why I choose to join this
 
 
 
-I am also interested in cars, one of my favorites is the apollo ie in full carbon
+I am also interested in cars, one of my favorites is the Apollo IE, in full carbon
