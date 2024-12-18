@@ -15,9 +15,13 @@ Computer science is one of my favorite topics which is why I choose to join this
 My trimester 2 class schedule:
 
 Spanish 1
+
 Chemistry 1
+
 CSSE 1
+
 ENS 1
+
 Integrated Mathematics 1b
 
 
@@ -39,3 +43,10 @@ I am also interested in cars, one of my favorites is the Apollo IE, in full carb
 [def]: https://www.google.com/imgres?q=&imgurl=https%3A%2F%2Fwww.hsdbackdrops.com%2Fcdn%2Fshop%2Fproducts%2FSMR260_7x5_Vintage_American_Flag_Backdrop_Background_4th_of_July_Patriotic_Props_1800x1800.jpg%3Fv%3D1625009249&imgrefurl=https%3A%2F%2Fwww.hsdbackdrops.com%2Fproducts%2Fphotography-backdrop-background-rustic-american-flag&docid=gXGLKpB93nJFVM&tbnid=N9o3q87g9Is7GM&vet=12ahUKEwjM25Xy_qKKAxV8JkQIHfsDNdY4ChAzegQIZRAA..i&w=910&h=650&hcb=2&ved=2ahUKEwjM25Xy_qKKAxV8JkQIHfsDNdY4ChAzegQIZRAA
 
 [Tool Verification](http://127.0.0.1:4100/devops/tools/verify)
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="{{site.baseurl}}/snake" style="text-decoration: none;">
+        <div style="background-color: #00FF00; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+            Snake Game
+        </div>
+    </a>
