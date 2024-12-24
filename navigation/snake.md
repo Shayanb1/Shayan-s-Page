@@ -16,8 +16,8 @@ permalink: /snake/
     canvas{
         display: none;
         border-style: solid;
-        border-width: 10px;
-        border-color: #FFFFFF;
+        border-width: 20px; 
+        border-color: #000000;
     }
     canvas:focus{
         outline: none;
@@ -63,34 +63,48 @@ permalink: /snake/
     }
 
     #setting input:checked + label{
-        background-color: #FFF;
+        background-color: #00FF00;
         color: #000;
     }
+    h2{
+    font-size: 4em
+    }
 </style>
-
-<h2>Snake</h2>
-<div class="container">
+ ![snake](https://curiousworld-static-files.s3.amazonaws.com/blog/Snake%20Final%20Blog.jpg)
+ 
+<h2>Snake (Monkey style) </h2>
+<div class="container" style="text-align:center;">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
         <p class="fs-4">Score: <span id="score_value">0</span></p>
     </header>
     <div class="container bg-secondary" style="text-align:center;">
         <!-- Main Menu -->
         <div id="menu" class="py-4 text-light">
-            <p>Welcome to Snake, press <span style="background-color: #FFFFFF; color: #000000">space</span> to begin</p>
+            <p>Welcome to Snake, press <span style="background-color: #D3D3D3; color: #000000">space</span> to begin</p>
             <a id="new_game" class="link-alert">new game</a>
             <a id="setting_menu" class="link-alert">settings</a>
         </div>
         <!-- Game Over -->
         <div id="gameover" class="py-4 text-light">
-            <p>Game Over, press <span style="background-color: #FFFFFF; color: #000000">space</span> to try again</p>
+            <p>Game Over, press <span style="background-color: #00FF00; color: #000000">space</span> to try again</p>
             <a id="new_game1" class="link-alert">new game</a>
             <a id="setting_menu1" class="link-alert">settings</a>
         </div>
         <!-- Play Screen -->
-        <canvas id="snake" class="wrap" width="320" height="320" tabindex="1"></canvas>
+        <canvas id="snake" class="wrap" width="500" height="500" tabindex="1"></canvas>
+       
+
+
+
+        <div style="display:none;">
+            <img id="jungle" src= "https://as2.ftcdn.net/v2/jpg/02/35/01/83/1000_F_235018350_NwKA1B9koCLcptK9P1B4WznO19dIQPhe.jpg"/>
+            <img id="monkey" src= "https://png.pngtree.com/png-clipart/20231224/original/pngtree-hear-no-evil-monkey-emoji-png-image_13926215.png"/>
+            <img id="banana" src= "https://gimgs2.nohat.cc/thumb/f/640/yellow-fruit-banana-dancing-bananas-transparent-background-png-clipart--comhiclipartihzgq.jpg"/>
+        </div>
+  
         <!-- Settings Screen -->
         <div id="setting" class="py-4 text-light">
-            <p>Settings Screen, press <span style="background-color: #FFFFFF; color: #000000">space</span> to go back to playing</p>
+            <p>Settings Screen, press <span style="background-color: #00FF00; color: #000000">space</span> to go back to playing</p>
             <a id="new_game2" class="link-alert">new game</a>
             <br>
             <p>Speed:
@@ -118,6 +132,13 @@ permalink: /snake/
         // Canvas & Context
         const canvas = document.getElementById("snake");
         const ctx = canvas.getContext("2d");
+
+
+        const background_image = document.getElementById("jungle")
+        const monkey_image = document.getElementById("monkey")
+        const food_image = document.getElementById("banana")
+
+
         // HTML Game IDs
         const SCREEN_SNAKE = 0;
         const screen_snake = document.getElementById("snake");
@@ -136,13 +157,13 @@ permalink: /snake/
         const button_setting_menu = document.getElementById("setting_menu");
         const button_setting_menu1 = document.getElementById("setting_menu1");
         // Game Control
-        const BLOCK = 10;   // size of block rendering
+        const BLOCK = 25;   // size of block rendering - this is the block size of snake
         let SCREEN = SCREEN_MENU;
         let snake;
         let snake_dir;
         let snake_next_dir;
         let snake_speed;
-        let food = {x: 0, y: 0};
+        let food = {x: 10, y: 10};
         let score;
         let wall;
         /* Display Control */
@@ -265,17 +286,29 @@ permalink: /snake/
                 altScore(++score);
                 addFood();
                 activeDot(food.x, food.y);
+               // activeFood(food.x, food.y);
             }
-            // Repaint canvas
+            // Repaint canvas/////////////////////////////////////////////////**********************
             ctx.beginPath();
-            ctx.fillStyle = 'green';
+            ctx.fillStyle = 'pink';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
+            ctx.drawImage(background_image, 0, 0, 500, 500)
+
+
+
+
+
+
+
             // Paint snake
             for(let i = 0; i < snake.length; i++){
                 activeDot(snake[i].x, snake[i].y);
             }
             // Paint food
             activeDot(food.x, food.y);
+           // activeFood(food.x, food.y);
             // Debug
             //document.getElementById("debug").innerHTML = snake_dir + " " + snake_next_dir + " " + snake[0].x + " " + snake[0].y;
             // Recursive call after speed delay, déjà vu
@@ -328,14 +361,24 @@ permalink: /snake/
         /* Dot for Food or Snake part */
         /////////////////////////////////////////////////////////////
         let activeDot = function(x, y){
-            ctx.fillStyle = "#FFFFFF";
-            ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
+            //ctx.fillStyle = "#FF0000";      // color of the food and snake
+            ctx.drawImage(monkey_image, x * BLOCK, y * BLOCK, BLOCK, BLOCK); 
+            //ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
+        
+
+       /* let activeFood = function(x, y){
+            //ctx.fillStyle = "#FF0000";      // color of the food and snake
+            ctx.drawImage(banana_image, x * BLOCK, y * BLOCK, BLOCK, BLOCK); 
+            //ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
+*/
         }
         /* Random food placement */
         /////////////////////////////////////////////////////////////
         let addFood = function(){
             food.x = Math.floor(Math.random() * ((canvas.width / BLOCK) - 1));
             food.y = Math.floor(Math.random() * ((canvas.height / BLOCK) - 1));
+           // ctx.drawImage(food_image, x * BLOCK, y * BLOCK, BLOCK, BLOCK); 
+
             for(let i = 0; i < snake.length; i++){
                 if(checkBlock(food.x, food.y, snake[i].x, snake[i].y)){
                     addFood();
@@ -354,17 +397,18 @@ permalink: /snake/
         }
         /////////////////////////////////////////////////////////////
         // Change the snake speed...
-        // 150 = slow
-        // 100 = normal
-        // 50 = fast
+        // 200 = Beginner
+        // 150 = Slow
+        // 100 = Normal
+        // 50 = Hard
         let setSnakeSpeed = function(speed_value){
             snake_speed = speed_value;
         }
         /////////////////////////////////////////////////////////////
         let setWall = function(wall_value){
             wall = wall_value;
-            if(wall === 0){screen_snake.style.borderColor = "#606060";}
-            if(wall === 1){screen_snake.style.borderColor = "#FFFFFF";}
+            if(wall === 0){screen_snake.style.borderColor = "000000";}
+            if(wall === 1){screen_snake.style.borderColor = "000000";}
         }
     })();
 </script>
