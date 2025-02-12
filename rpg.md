@@ -5,4 +5,4 @@ description: RPG game
 hide: true
 ---
 
-![Shayan's a dumbass](/images/)
+![Shayan's dumb](/images/)
