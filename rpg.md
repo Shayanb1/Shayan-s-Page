@@ -5,4 +5,4 @@ description: RPG game
 hide: true
 ---
 
-![Shayan's dumb](/images/)
+![Shayan's dumb](/images/notebooks/foundation/)
