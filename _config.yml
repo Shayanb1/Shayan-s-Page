@@ -7,7 +7,7 @@ baseurl: "/shayanblog"
 future: true
 # remote_theme: jekyll/minima
 minima:
-  skin: 
+  skin: dark
   social_link:
     - { platform: github, user_url: "https://https://github.com/Ruhaan-Bansal"}
     - { platform: x, user_url: "https://x.com/NighthawkCoding/" }
@@ -26,6 +26,7 @@ header_pages:
   - navigation/about.md
   - navigation/snake.md 
   - navigation/ideas.md
+  - README4YML.md
   - navigation/spGame.md
 include:
   - "*.ipynb"
