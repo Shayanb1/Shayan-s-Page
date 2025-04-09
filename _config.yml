@@ -3,7 +3,7 @@ description: "Class of 2028"
 owner_name: Shayan Bhatti 
 github_username: Shayanb1
 github_repo: "shayanblog"
-# baseurl: "/ruhaanblog"
+baseurl: "/shayanblog"
 future: true
 # remote_theme: jekyll/minima
 minima:
