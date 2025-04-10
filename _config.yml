@@ -2,8 +2,8 @@ title: Shayan's Blog Blog
 description: "Class of 2028"
 owner_name: Shayan Bhatti 
 github_username: Shayanb1
-github_repo: "shayanblog"
-baseurl: "/shayanblog"
+github_repo: "Shayan-s-Page"
+baseurl: "/Shayan-s-Page"
 future: true
 # remote_theme: jekyll/minima
 minima:
