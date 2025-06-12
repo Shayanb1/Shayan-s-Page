@@ -131,10 +131,11 @@ This June, me and my team (overworld) showcased our project to many parents and 
 
 ### This course had improved my mindset in so many different ways, at first I thought this class was just a free A and I could just use ChatGPT for everything, but then once I tried to actually code, I realized just how interesting and fun it is. I realized that coding is just a form of VR where I can make whatever I want, and if I ever get stuck, I always have people help me out. But this course wasn't only benifial to me for making games, I also learning how to work with a team of people I had ever met before, I learned how to fix errors in code, and my greatest accomplishment, I learned how to enjoy coding.
 <hr>
-<br>
+<br><img width="1178" alt="Screenshot 2025-06-10 at 11 20 23 PM" src="https://github.com/user-attachments/assets/eb8bfcae-eaa3-44b5-ba52-ca6ba6e22fce" />
 
-<img src="/Users/shayanbhatti/csse2/new/Shayan-s-Page/images/Final/SmartGrade.png" alt="Smart Grade" width="600">
+<img width="515" alt="Screenshot 2025-06-10 at 11 19 05 PM" src="https://github.com/user-attachments/assets/e3a79dce-42e7-4b43-9edd-8322451a4131" />
 
-<img src="/Users/shayanbhatti/csse2/new/Shayan-s-Page/images/Final/CommitGrade.png" alt="Commit Grade" width="600">
+<img width="537" alt="Screenshot 2025-06-10 at 11 18 59 PM" src="https://github.com/user-attachments/assets/96b8300a-0dc8-4eeb-9548-89e39d83b2e0" />
 
-<img src="/Users/shayanbhatti/csse2/new/Shayan-s-Page/images/Final/GithubStats.png" alt="GitHub Stats" width="600">
+
+
